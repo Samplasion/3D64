@@ -95,8 +95,13 @@ int main(int argc, char **argv)
          // @TODO this should be moved out to the platform layer until we develop a proper UI and way to exit
          u32 KeysDown = hidKeysDown();
 
-         if (KeysDown & KEY_START & KEY_SELECT)
+         if (KeysDown & KEY_START & KEY_SELECT) {
+             PICloseThread();
+             VICloseThread();
+             PIFCloseThread();
+             ExitPlatform();
              break;
+         }
 #endif
 
 
