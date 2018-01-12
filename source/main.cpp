@@ -92,7 +92,7 @@ int main(int argc, char **argv)
     while (MainLoopPlatform())
     {
 #ifdef _3DS
-         @TODO this should be moved out to the platform layer until we develop a proper UI and way to exit
+         // @TODO this should be moved out to the platform layer until we develop a proper UI and way to exit
          u32 KeysDown = hidKeysDown();
 
          if (KeysDown & KEY_START & KEY_SELECT)
